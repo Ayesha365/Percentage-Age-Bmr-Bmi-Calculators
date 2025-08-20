@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<header>
+ <div class="navbar">
+      <h4 class="calc">CALC.NET</h4>
+      <div class="navbar-links">
+         <i class="fa-solid fa-percent" style="background-color:#2596be ;"></i>
+         <a href="index.html">Percentage</a>
+        <i class="fa-solid fa-calendar-days" style="background-color: #2596be;"></i>
+        <a href="age.html" class="page1">AGE</a>
+        <i class="fa-solid fa-stethoscope"style="background-color: #2596be;"></i>
+        <a href="bmr.html">BMR</a>
+        <i class="fa-solid fa-heart-pulse"style="background-color: #2596be;"></i>
+        <a href="bmi.html">BMI</a>
+
+        </div>
+        </div>
+        </header>
+<body>
+    <h1 class="bmi">BMI Calculator</h1>
+    <div class="rectanglebox">
+    <h3 class="rectangleheading">Modify the values and click the Calculate button to use</h3>
+ </div>
+ <div class="bmicontent" >
+  <label  class="unit1">
+    <input type="radio" value="first"  name="option" style="margin-right: 10px;"  onclick="showContent('first')"> US Customary Units
+    
+     </label>
+  <label class="unit2">
+     <input type="radio" value="second" name="option" style="margin-right: 10px;"  onclick="showContent('second')">  Metric Units
+     </label>
+  <div id="first" >
+  <h4 class="height">Height</h4>
+  <input type="number" class="input1"id="usFeet">
+  <h5 class="custombox1">Feet(ft)</h5>
+  <input type="number" class="input2" id="usInches">
+   <h5 class="custombox2">Inches(in)</h5>
+   <h4 class="weight">Weight</h4>
+   <input type="number" class="input3" id="usWeight">
+    <h5 class="custombox3">Pounds(lb)</h5>
+    <button class="bmibutton">Calculate</button>
+
+
+
+</div>
+
+<div id="second" style="display: none;">
+  <h4 class="height">Height</h4>
+  <input type="number" class="input1" id="metricHeight">
+  <h5 class="custombox1">Centimeters(cm)</h5>
+     <h4 class="weight">Weight</h4>
+   <input type="number" class="input3"  id="metricWeight">
+   <h5 class="custombox3">Kilograms(kg)</h5>
+   <button class="bmibutton">Calculate</button>
+</div>
+
+
+ </div>
+
+     <script>
+  function showContent(id) {
+    // Hide all contents first
+    document.getElementById('first').style.display = 'none';
+    document.getElementById('second').style.display = 'none';
+    
+
+    // Show the one selected
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
+
+</body>
+<script src="bmi.js"></script>
+<footer class="footer">
+  <div class="footer-links">
+    <a href="#" style="background-color: #dcf0fa;"  >About Us</a> |
+    <a href="#"style="background-color: #dcf0fa;">Sitemap</a> |
+    <a href="#"style="background-color: #dcf0fa;">Terms of Use</a> |
+    <a href="#"style="background-color: #dcf0fa;">Privacy Policy</a>
+  </div>
+  <div class="footer-copy">
+    © 2008 - 2025 calculator.net
+  </div>
+</footer>
+</html>
