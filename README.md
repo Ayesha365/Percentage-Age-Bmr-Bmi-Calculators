@@ -1,2 +1,2 @@
-# Percentage-Age-Bmr-Bmi-Calculators
+# Calculators
 Beginner-friendly calculator covering Age, BMI, BMR, and Percentage.
